@@ -1,15 +1,13 @@
 package com.baomidou;
 
+import com.baomidou.mybatisplus.enums.DBType;
+import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
-
-import com.baomidou.mybatisplus.enums.DBType;
-import com.baomidou.mybatisplus.enums.Optimize;
-import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 
 @SpringBootApplication
 @MapperScan("com.baomidou.mybatisplus.sample.mapper*")
@@ -28,8 +26,8 @@ public class Application {
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
-        paginationInterceptor.setDialectType(DBType.POSTGRE.getDb());
-        paginationInterceptor.setOptimizeType(Optimize.JSQLPARSER.getOptimize());
+        paginationInterceptor.setDialectType(DBType.H2.getDb());
+        //paginationInterceptor.setOptimizeType(Optimize.JSQLPARSER.getOptimize());
         return paginationInterceptor;
     }
 
