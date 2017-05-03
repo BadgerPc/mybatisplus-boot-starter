@@ -1,5 +1,10 @@
+#app
+server:
+    port: 7000
+
 #spring
 spring:
+  application-name: /
   devtools:
     restart:
       enabled: false

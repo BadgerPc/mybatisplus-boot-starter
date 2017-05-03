@@ -1,7 +1,8 @@
 
-DELETE FROM customers;
+DELETE FROM account;
 
-INSERT INTO partner_mapping (customer_id, partner_id, partner_customer_id, last_name, first_name, middle_name, avatar_image)
+INSERT INTO partner_mapping (id, user_name, sex, create_time)
 VALUES
-  (100000, 'id1', 'sid1', 'Иванов', 'Иван', 'Иванович', NULL),
-  (100002, 'id4', 'sid6', 'China', NULL, NULL, NULL);
+  (0, '雷锋', 0, '2017-1-1 1:1:1'),
+  (1, '三毛', 0, '2017-1-1 1:1:1'),
+  (2, '汤显祖', 0, '2017-1-1 1:1:1');

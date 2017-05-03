@@ -1,13 +1,11 @@
 
 DROP TABLE IF EXISTS account;
 
-CREATE TABLE customers
+CREATE TABLE account
 (
-  id          INTEGER PRIMARY KEY,
-  login       VARCHAR(255) NOT NULL,
-  password    VARCHAR(255) NOT NULL,
-  balance     INTEGER      NOT NULL,
-  first_name  VARCHAR(255) NOT NULL,
-  last_name   VARCHAR(255) NOT NULL,
-  middle_name VARCHAR(255) NOT NULL
+	id BIGINT(20) NOT NULL ,
+	user_name VARCHAR(30) NULL DEFAULT NULL ,
+	sex INT(5) NULL DEFAULT NULL ,
+	create_time DATETIME NULL DEFAULT NULL,
+	PRIMARY KEY (id)
 );
