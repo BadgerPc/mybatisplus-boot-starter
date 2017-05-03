@@ -20,15 +20,15 @@ import java.util.List;
  * @since 2017-02-20
  */
 @RestController
-@RequestMapping("/hotel")
+@RequestMapping("/account")
 public class AccountController {
 
     @Autowired
     private IAccountService accountService;
 
     @ResponseBody
-    @GetMapping("/")
-    public List<Account> getAll() {
+    @GetMapping("/list")
+    public List<Account> list() {
         return accountService.selectList(Condition.EMPTY);
     }
 

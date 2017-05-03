@@ -4,7 +4,6 @@ server:
 
 #spring
 spring:
-  application-name: /
   devtools:
     restart:
       enabled: false

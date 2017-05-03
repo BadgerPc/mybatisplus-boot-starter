@@ -18,7 +18,7 @@ public class Application {
     public static void main(String[] args) {
         new SpringApplicationBuilder(Application.class).web(true).run(args);
         logger.info("PortalApplication is sussess!");
-        System.err.println("sample started. http://localhost:7000");
+        System.err.println("sample started. http://localhost:7000/account/list");
     }
 
     /**
