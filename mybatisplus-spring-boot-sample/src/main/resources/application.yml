@@ -3,11 +3,21 @@ spring:
   devtools:
     restart:
       enabled: false
+
+  # H2 DATABASE CONFIG
   datasource:
-    url: jdbc:postgresql://127.0.0.1:5432/caratacus
-    username: caratacus
+    url: jdbc:h2:mem:testdb
+    username: sa
     password: caratacus
-    driver-class-name: org.postgresql.Driver
+    platform: h2
+    initialize: true
+    continue-on-error: true
+  h2-console:
+      enabled: true
+      path: /h2-console
+      settings.trace: false
+      settings.web-allow-others: false
+
 #mybatis
 mybatis-plus:
   mapper-locations: classpath:com/baomidou/mybatisplus/sample/sql/*Mapper.xml
@@ -21,6 +31,7 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
+
 #logging
 logging:
   level: warn

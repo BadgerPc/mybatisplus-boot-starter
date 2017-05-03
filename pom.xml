@@ -24,8 +24,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
-        <mybatis.plus.version>2.1.0.RELEASE</mybatis.plus.version>
-        <mybatis.plus.start.version>1.0.0</mybatis.plus.start.version>
         <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
         <maven-bundle-plugin.version>3.3.0</maven-bundle-plugin.version>
         <maven.compiler.version>2.3.2</maven.compiler.version>
@@ -34,21 +32,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.app</groupId>
-                <artifactId>app-mybatis-plus</artifactId>
-                <version>${mybatis.plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatisplus-spring-boot-starter</artifactId>
-                <version>${mybatis.plus.start.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatisplus-spring-boot</artifactId>
-                <version>${mybatis.plus.start.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -62,11 +45,6 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>commons-logging</groupId>
-                <artifactId>commons-logging</artifactId>
-                <version>1.2</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>

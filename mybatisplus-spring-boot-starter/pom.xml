@@ -10,37 +10,29 @@
     <artifactId>mybatisplus-spring-boot-starter</artifactId>
     <name>mybatisplus-spring-boot-starter</name>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.7</java.version>
+        <mybatis-plus.version>2.0.7</mybatis-plus.version>
+    </properties>
+
     <dependencies>
+        <!-- Optional dependencies -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
         <!-- Compile dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
+            <scope>compile</scope>
         </dependency>
-        <!-- Optional dependencies -->
-        <dependency>
-            <groupId>com.app</groupId>
-            <artifactId>app-mybatis-plus</artifactId>
-        </dependency>
-        <!-- @ConfigurationProperties annotation processing (metadata for IDEs) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-        </dependency>
-        <!-- Test dependencies -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
