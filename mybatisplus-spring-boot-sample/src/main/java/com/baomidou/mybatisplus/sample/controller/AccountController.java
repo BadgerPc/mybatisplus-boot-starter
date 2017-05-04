@@ -1,15 +1,17 @@
 package com.baomidou.mybatisplus.sample.controller;
 
-import com.baomidou.mybatisplus.mapper.Condition;
-import com.baomidou.mybatisplus.sample.entity.Account;
-import com.baomidou.mybatisplus.sample.service.IAccountService;
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.baomidou.mybatisplus.sample.entity.Account;
+import com.baomidou.mybatisplus.sample.service.IAccountService;
 
 /**
  * <p>
@@ -29,7 +31,24 @@ public class AccountController {
     @ResponseBody
     @GetMapping("/list")
     public List<Account> list() {
-        return accountService.selectList(Condition.EMPTY);
+        return accountService.selectList(null);
+    }
+
+    @ResponseBody
+    @GetMapping("/save")
+    public String save() {
+        Account account = new Account();
+        account.setSex(new Random().nextInt(1));
+        account.setUserName("三毛-" + new Random().nextInt(100));
+        account.setCreateTime(new Date());
+        accountService.insert(account);
+        return "插入成功！返回 ID: " + account.getId();
+    }
+
+    @ResponseBody
+    @GetMapping("/delete")
+    public String delete() {
+        return "删除所有！结果: " + accountService.delete(null);
     }
 
 }

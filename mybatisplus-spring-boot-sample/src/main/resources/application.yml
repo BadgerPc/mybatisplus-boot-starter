@@ -28,7 +28,7 @@ mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   typeAliasesPackage: com.baomidou.mybatisplus.sample.entity
   global-config:
-    id-type: 3
+    id-type: 2
     field-strategy: 2
     auto-set-db-type: true
     db-column-underline: true
