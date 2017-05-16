@@ -1,6 +1,7 @@
-#mybatisplus-boot-starter
+#mybatisplus-spring-boot-starter
 
-mybatisplus-spring-boot-starter 为 Mybatis-Plus 快速集成 spring-boot 简化配置而生，不再需拿 MyBatis 和 Hibernate 相比，mybatis-plus 作为 mybatis 的好拍档补充了它的短板，让 mybatis 兼具了 hibernate 的优点。 
+
+mybatisplus-spring-boot-starter 为 Mybatis-Plus 快速集成 spring-boot 简化配置而生，不再需拿 MyBatis 和 Hibernate 相比，mybatis-plus 作为 mybatis 的好拍档补充了它的短板，让 mybatis 兼具了 hibernate 的优点。 
 
 
 > 坐标地址：  http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22mybatisplus-spring-boot-starter%22
@@ -73,7 +74,7 @@ Mybatis 增强工具包 - 只做增强不做改变，简化`CRUD`操作
 ```xml
 <dependency>
     <groupId>com.baomidou</groupId>
-    <artifactId>mybatis-plus</artifactId>
+    <artifactId>mybatisplus-spring-boot-starter</artifactId>
     <version>maven 官方最新版本为准</version>
 </dependency>
 ```
