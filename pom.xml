@@ -44,8 +44,9 @@
     </scm>
 
     <properties>
-        <!--key-->
+        <!--key
         <gpg.keyname>F4B46FB9</gpg.keyname>
+        -->
         <!--dependency-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
@@ -103,7 +104,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.version}</version>
+                <version>2.3.2</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -114,7 +115,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>${maven.source.version}</version>
+                <version>2.2.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -124,17 +125,25 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- workaround for https://github.com/mybatis/spring-boot-starter/issues/127 -->
+            <!-- Javadoc -->
             <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>${maven-bundle-plugin.version}</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <!-- GPG -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>${maven.gpg.version}</version>
+                <version>1.6</version>
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -148,28 +157,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.version}</version>
+                <version>2.19.1</version>
                 <configuration>
                     <skipTests>true</skipTests>
                 </configuration>
             </plugin>
-            <!-- Javadoc -->
+            <!-- workaround for https://github.com/mybatis/spring-boot-starter/issues/127 -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven.javadoc.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
-                            <additionalparam>-Xdoclint:none</additionalparam>
-                        </configuration>
-                    </execution>
-                </executions>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>${maven-bundle-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
