@@ -19,8 +19,8 @@ mybatisplus-spring-boot-starter 为 Mybatis-Plus 快速集成 spring-boot 简化
 </p>
 
 <p align="center">
-  <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.baomidou%22%20AND%20a%3A%22mybatis-plus%22">
-    <img alt="maven" src="https://img.shields.io/maven-central/v/com.baomidou/mybatis-plus.svg?style=flat-square">
+  <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.baomidou%22%20AND%20a%3A%22mybatisplus-spring-boot-starter%22">
+    <img alt="maven" src="https://img.shields.io/maven-central/v/com.baomidou/mybatisplus-spring-boot-starter.svg?style=flat-square">
   </a>
 
   <a href="https://github.com/vuejs/vue">
