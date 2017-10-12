@@ -41,6 +41,9 @@ public class MybatisPlusProperties {
      */
     private String typeAliasesPackage;
 
+    // TODO 自定义枚举包
+    private String typeEnumsPackage;
+
     /**
      * Packages to search for type handlers. (Package delimiters are ",; \t\n")
      */
@@ -109,6 +112,14 @@ public class MybatisPlusProperties {
 
     public void setTypeAliasesPackage(String typeAliasesPackage) {
         this.typeAliasesPackage = typeAliasesPackage;
+    }
+
+    public String getTypeEnumsPackage() {
+        return typeEnumsPackage;
+    }
+
+    public void setTypeEnumsPackage(String typeEnumsPackage) {
+        this.typeEnumsPackage = typeEnumsPackage;
     }
 
     public boolean isCheckConfigLocation() {

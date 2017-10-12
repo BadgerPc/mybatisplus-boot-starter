@@ -131,6 +131,10 @@ public class MybatisPlusAutoConfiguration {
         if (StringUtils.hasLength(this.properties.getTypeAliasesPackage())) {
             factory.setTypeAliasesPackage(this.properties.getTypeAliasesPackage());
         }
+        // TODO 自定义枚举包
+        if (StringUtils.hasLength(this.properties.getTypeEnumsPackage())) {
+            factory.setTypeEnumsPackage(this.properties.getTypeEnumsPackage());
+        }
         if (StringUtils.hasLength(this.properties.getTypeHandlersPackage())) {
             factory.setTypeHandlersPackage(this.properties.getTypeHandlersPackage());
         }
